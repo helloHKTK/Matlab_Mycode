@@ -1,0 +1,14 @@
+tempPattern=[1 0 1 1 1]; % 表示item:a c d e
+now_pattern=[0 1 1 1 1]; % 表示item:b c d e
+
+an=tempPattern-now_pattern;
+unique(an)
+
+
+if isequal(unique(an),[0 1]) || isequal(unique(an),0) || isequal(unique(an),1) % tempPattern是最大模式
+    fprintf('tempPattern是最大模式\n');
+elseif isequal(unique(an),[-1 0]) || isequal(unique(an),-1) % now_pattern是最大模式
+    fprintf('now_pattern是最大模式\n');
+else
+    fprintf('都是最大模式\n');
+end
