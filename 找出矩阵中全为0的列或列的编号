@@ -7,3 +7,8 @@ A=[
 column_num=find(~any(A)); % 返回矩阵中不全为0的【列】编号
 
 row_num=find(any(A,2))  % 返回矩阵中不全为0的【行】编号
+
+
+% 例2：返回行向量中不为0的列编号
+B=[1 0 0 1 0];
+column_num2=find(B~=0);
